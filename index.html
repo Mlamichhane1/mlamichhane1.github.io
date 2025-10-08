@@ -7,27 +7,61 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
     header { background: #1f2937; color: white; padding: 20px; text-align: center; }
-    section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    section { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
     h1, h2 { color: #1f2937; }
+    h1 { margin-bottom: 5px; }
+    .hero { background: #f3f4f6; text-align: center; padding: 50px 20px; }
+    .hero h2 { font-size: 24px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; color: #4b5563; }
+
     .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     .card h3 { margin-top: 0; }
     .links a { margin-right: 10px; color: #2563eb; text-decoration: none; }
-    footer { background: #1f2937; color: white; text-align: center; padding: 10px; margin-top: 40px; }
-    @media(max-width: 700px){ .projects { grid-template-columns: 1fr; } }
+    .links a:hover { text-decoration: underline; }
+
+    .resume-btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    .resume-btn:hover { background: #1e40af; }
+
+    footer { background: #1f2937; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+    footer a { color: white; text-decoration: none; margin: 0 8px; }
+    footer a:hover { text-decoration: underline; }
+
+    @media(max-width: 700px){
+      .projects { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Madhav Lamichhane</h1>
-  <p>Economics & Data Science Student @ Drexel | Python • ML • Data Visualization</p>
+  <p>Economics & Data Science Student @ Drexel | Python • Machine Learning • Data Visualization</p>
 </header>
+
+<section class="hero">
+  <h2>Welcome to My Portfolio 👋</h2>
+  <p>Exploring the intersection of Economics, Data Science, and AI to solve real-world problems.</p>
+</section>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I’m a B.S. Economics student at Drexel University pursuing a minor in Data Science. I’m passionate about applying AI, data analytics, and machine learning to solve real-world economic and healthcare problems. I love turning data into insights and building meaningful tools.
+    I’m a B.S. Economics student at Drexel University pursuing a minor in Data Science. 
+    I’m passionate about applying AI, machine learning, and data analytics to tackle economic 
+    and healthcare challenges. I love turning raw data into clear, actionable insights.
+  </p>
+
+  <p style="text-align:center;">
+    <a href="resume.pdf" class="resume-btn" download>📄 Download Resume</a>
   </p>
 </section>
 
@@ -36,7 +70,7 @@
   <div class="projects">
     <div class="card">
       <h3>US Inflation Trend Analyzer</h3>
-      <p>Interactive dashboard analyzing 14 years of CPI data to uncover inflation patterns.</p>
+      <p>Interactive dashboard analyzing 14 years of CPI data to uncover inflation patterns and KPIs.</p>
       <p><strong>Tech:</strong> Python, Pandas, Tableau</p>
       <div class="links">
         <a href="#">🔗 Tableau</a>
@@ -46,8 +80,8 @@
 
     <div class="card">
       <h3>Economic Inflation Forecasting App</h3>
-      <p>Machine learning web app that forecasts inflation trends using ARIMA models.</p>
-      <p><strong>Tech:</strong> Python, Streamlit, statsmodels</p>
+      <p>Machine learning web app forecasting inflation trends using ARIMA models and Streamlit.</p>
+      <p><strong>Tech:</strong> Python, statsmodels, Streamlit</p>
       <div class="links">
         <a href="#">🌐 Live App</a>
         <a href="#">💻 GitHub</a>
@@ -67,13 +101,18 @@
 <section id="contact">
   <h2>Contact</h2>
   <p>📧 lamichhanemadhav2018@gmail.com</p>
-<a href="https://www.linkedin.com/in/madhav-lamichhane" target="_blank">LinkedIn</a>
+  <p>
+    🔗 <a href="https://www.linkedin.com/in/madhav-lamichhane" target="_blank">LinkedIn</a> 
+    | 🐙 <a href="https://github.com/mlamichhane1" target="_blank">GitHub</a>
+  </p>
 </section>
 
 <footer>
-  <p>© 2025 Madhav Lamichhane</p>
+  <p>© 2025 Madhav Lamichhane | 
+    <a href="https://www.linkedin.com/in/madhav-lamichhane" target="_blank">LinkedIn</a> · 
+    <a href="https://github.com/mlamichhane1" target="_blank">GitHub</a>
+  </p>
 </footer>
 
 </body>
 </html>
-
