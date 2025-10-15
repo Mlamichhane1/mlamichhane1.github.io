@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madhav Lamichhane — Portfolio</title>
+  <meta name="description" content="Live portfolio of Madhav Lamichhane — Economics & Data Science at Drexel University. Projects, experience, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a; /* slate-900 */
+      --muted:#475569; /* slate-600 */
+      --border:#e2e8f0; /* slate-200 */
+      --accent:#0ea5e9; /* sky-500 */
+      --chip:#f1f5f9; /* slate-100 */
+      --link:#0369a1; /* sky-700 */
+      --code:#0b1220;
+      --shadow:0 8px 30px rgba(2, 6, 23, 0.06);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:var(--bg); color:var(--text); line-height:1.6;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Layout: Notion-like sidebar + content */
+    .layout{display:grid; grid-template-columns:280px 1fr; min-height:100vh}
+    .sidebar{
+      position:sticky; top:0; height:100vh; border-right:1px solid var(--border);
+      padding:28px 22px; background:#fcfdff;
+    }
+    .brand{font-weight:700; font-size:1.1rem; letter-spacing:.2px;}
+    .tagline{color:var(--muted); margin-top:4px; font-size:.95rem}
+    .nav{margin-top:22px}
+    .nav a{display:block; padding:10px 12px; border-radius:10px; color:var(--muted); font-weight:500}
+    .nav a:hover,.nav a.active{background:var(--chip); color:var(--text); text-decoration:none}
+    .links{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+    .links a{padding:8px 12px; background:var(--chip); border:1px solid var(--border); border-radius:999px; font-size:.9rem}
+
+    .content{padding:40px 8vw 80px}
+    section{padding:36px 0; border-bottom:1px solid var(--border)}
+    section:last-of-type{border-bottom:none}
+    h1{font-size:2.2rem; line-height:1.25; margin:0 0 10px}
+    h2{font-size:1.4rem; margin:0 0 16px}
+    p{margin:10px 0}
+
+    .hero{padding-top:8px}
+    .pill{display:inline-block; padding:6px 10px; background:#ecfeff; border:1px solid #bae6fd; color:#075985; border-radius:999px; font-size:.85rem; font-weight:600}
+    .cta{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap}
+    .btn{display:inline-block; padding:10px 14px; border-radius:10px; font-weight:600; border:1px solid var(--border); box-shadow:var(--shadow)}
+    .btn.primary{background:var(--accent); color:white; border-color:transparent}
+
+    .grid{display:grid; gap:14px}
+    @media(min-width:900px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+
+    .card{padding:18px 18px; border:1px solid var(--border); border-radius:14px; background:white; box-shadow:var(--shadow)}
+    .meta{color:var(--muted); font-size:.95rem}
+
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+    .chip{background:var(--chip); border:1px solid var(--border); padding:6px 10px; border-radius:999px; font-weight:600; font-size:.85rem}
+
+    .list{margin:0; padding-left:18px}
+    .list li{margin:6px 0}
+
+    .footer{margin-top:36px; color:var(--muted); font-size:.95rem}
+
+    /* Small screens */
+    @media(max-width:880px){
+      .layout{grid-template-columns:1fr}
+      .sidebar{position:relative; height:auto; border-right:none; border-bottom:1px solid var(--border)}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">Madhav Lamichhane</div>
+      <div class="tagline">Economics & Data Science @ Drexel</div>
+      <nav class="nav">
+        <a href="#about" class="active">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="links" aria-label="quick links">
+        <a href="mailto:ml3862@drexel.edu">Email</a>
+        <a href="https://www.linkedin.com/in/madhav-lamichhane-33304b264" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Mlamichhane1" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/Madhav_Lamichhane_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <!-- HERO / INTRO -->
+      <section class="hero" id="home">
+        <span class="pill">Open to Spring/Summer Co‑op</span>
+        <h1>Hi, I’m Madhav — I use data & AI to solve real problems.</h1>
+        <p class="meta">Undergraduate at Drexel University (LeBow & Pennoni Honors). Passionate about machine learning, analytics, and building simple tools that make decisions smarter.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="assets/Madhav_Lamichhane_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>About</h2>
+        <p>I’m an Economics major with a Data Science minor at Drexel University, focused on practical machine learning and analytics. I enjoy turning raw data into clear insights and building lightweight tools that help teams move faster. Right now, I’m strengthening my portfolio with hands‑on projects in Python and visualization while preparing for my next co‑op.</p>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education">
+        <h2>Education</h2>
+        <div class="grid">
+          <div class="card">
+            <strong>Drexel University — LeBow College of Business, Pennoni Honors College</strong>
+            <div class="meta">B.S. in Economics · Minor: Data Science · Sept 2025 – Dec 2027 · Philadelphia, PA</div>
+            <ul class="list">
+              <li>Honors: Member, Pennoni Honors College</li>
+              <li>Organizations: Drexel Economics Society, Drexel AI</li>
+              <li>Key coursework: Programming I & II, Intro to Data Science, Database Systems, Business Statistics I, Calculus I–III, Human‑Centered Design, Micro/Macroeconomics</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>Brookdale Community College</strong>
+            <div class="meta">A.S. in Data Science · GPA 3.6 · Sept 2023 – Aug 2024 · Lincroft, NJ</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <strong>M&N Home Care Services LLC</strong>
+            <div class="meta">Intake & Enrollment Specialist · Oct 2024 – May 2025 · New York, NY</div>
+            <ul class="list">
+              <li>Created and maintained prospect data & enrollment lists using Excel and Python; generated reports for senior management.</li>
+              <li>Coordinated nurse appointments and streamlined multi‑plan client enrollment.</li>
+              <li>Analyzed trends to identify growth opportunities and improve client retention; delivered monthly dashboards.</li>
+              <li>Supported operational decisions and workflow optimization with data‑driven insights.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>University of Idaho — Athletics</strong>
+            <div class="meta">Videographer (Women’s Basketball & Soccer) · Sept 2022 – Dec 2022 · Moscow, ID</div>
+            <ul class="list">
+              <li>Improved live streaming quality and reliability for sports events.</li>
+              <li>Collaborated with 50+ technical & production staff to run live broadcasts.</li>
+              <li>Coordinated with coaches to align broadcast flow with game plans and enhance viewer experience.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <strong>U.S. Inflation Trend Analyzer</strong>
+            <div class="meta">Python · Tableau</div>
+            <p>Interactive Tableau dashboard analyzing 14 years of U.S. CPI data to identify inflation trends. Data cleaned and processed in Python (Pandas) to produce KPIs and visual insights.</p>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Data Cleaning</span>
+            </div>
+          </div>
+          <div class="card">
+            <strong>KitchenAlchemy (In Progress)</strong>
+            <div class="meta">HTML · CSS · GitLab</div>
+            <p>Team‑based recipe recommendation website focused on reducing food waste and exploring diverse global recipes. Contributing to planning, interface layout, and usability testing.</p>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Usability Testing</span>
+              <span class="chip">GitLab</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="card">
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">R</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Java</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Excel</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Azure</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <p><strong>Email:</strong> <a href="mailto:ml3862@drexel.edu">ml3862@drexel.edu</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+12089977541">(208) 997‑7541</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/madhav-lamichhane-33304b264" target="_blank" rel="noopener">linkedin.com/in/madhav‑lamichhane‑33304b264</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Mlamichhane1" target="_blank" rel="noopener">github.com/Mlamichhane1</a></p>
+        </div>
+        <div class="footer">© <span id="year"></span> Madhav Lamichhane. Built for GitHub Pages.</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Active link highlight on scroll
+    const sections = [...document.querySelectorAll('main section')];
+    const links = [...document.querySelectorAll('.nav a')];
+    const byId = id => links.find(a => a.getAttribute('href') === `#${id}`);
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = byId(id);
+        if(!link) return;
+        if (entry.isIntersecting) {
+          links.forEach(a=>a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
