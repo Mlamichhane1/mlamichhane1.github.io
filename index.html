@@ -36,26 +36,18 @@
       position:sticky; top:0; height:100vh; border-right:1px solid var(--border);
       padding:28px 22px; background:#fcfdff; text-align:center;
     }
-    .profile-photo{
-      width:130px;
-      height:130px;
-      border-radius:50%;
-      object-fit:cover;
-      box-shadow:var(--shadow);
-      margin-bottom:14px;
-    }
-    .brand{font-weight:700; font-size:1.1rem;}
+    .brand{font-weight:700; font-size:1.2rem; margin-top:8px;}
     .tagline{color:var(--muted); margin-top:4px; font-size:.95rem}
-    .nav{margin-top:22px; text-align:left;}
+    .nav{margin-top:22px; text-align:left}
     .nav a{display:block; padding:10px 12px; border-radius:10px; color:var(--muted); font-weight:500}
-    .nav a:hover,.nav a.active{background:var(--chip); color:var(--text)}
+    .nav a:hover,.nav a.active{background:var(--chip); color:var(--text); text-decoration:none}
     .links{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
     .links a{padding:8px 12px; background:var(--chip); border:1px solid var(--border); border-radius:999px; font-size:.9rem}
 
     .content{padding:40px 8vw 80px}
     section{padding:36px 0; border-bottom:1px solid var(--border)}
     section:last-of-type{border-bottom:none}
-    h1{font-size:2.2rem; margin:0 0 10px}
+    h1{font-size:2.2rem; line-height:1.25; margin:0 0 10px}
     h2{font-size:1.4rem; margin:0 0 16px}
     p{margin:10px 0}
 
@@ -70,13 +62,11 @@
 
     .card{padding:18px; border:1px solid var(--border); border-radius:14px; background:white; box-shadow:var(--shadow)}
     .meta{color:var(--muted); font-size:.95rem}
+    .chips{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+    .chip{background:var(--chip); border:1px solid var(--border); padding:6px 10px; border-radius:999px; font-weight:600; font-size:.85rem}
     .list{margin:0; padding-left:18px}
     .list li{margin:6px 0}
-
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
-    .chip{background:var(--chip); border:1px solid var(--border); padding:6px 10px; border-radius:999px; font-weight:600; font-size:.85rem}
-
-    .footer{margin-top:36px; color:var(--muted); font-size:.95rem; text-align:center}
+    .footer{margin-top:36px; color:var(--muted); font-size:.95rem}
 
     @media(max-width:880px){
       .layout{grid-template-columns:1fr}
@@ -87,8 +77,8 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <img src="Madhav_Lamichhane.jpg" alt="Madhav Lamichhane" class="profile-photo" />
-      <div class="brand">Madhav Lamichhane</div>
+      <img src="assets/Madhav Lamichhane.jpg" alt="Madhav Lamichhane" style="width:130px;height:130px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 18px;box-shadow:0 4px 12px rgba(0,0,0,0.15);"/>
+      <div class="brand"><strong>Madhav Lamichhane</strong></div>
       <div class="tagline">Economics & Data Science @ Drexel</div>
       <nav class="nav">
         <a href="#about" class="active">About</a>
@@ -100,8 +90,8 @@
       </nav>
       <div class="links">
         <a href="mailto:ml3862@drexel.edu">Email</a>
-        <a href="https://www.linkedin.com/in/madhav-lamichhane-33304b264" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Mlamichhane1" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/madhav-lamichhane-33304b264" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Mlamichhane1" target="_blank" rel="noopener">GitHub</a>
       </div>
     </aside>
 
@@ -111,15 +101,12 @@
         <span class="pill">Open to Spring/Summer Co-op</span>
         <h1>Hi, I’m Madhav — I use data & AI to solve real problems.</h1>
         <p class="meta">Undergraduate at Drexel University (LeBow & Pennoni Honors). Passionate about machine learning, analytics, and building simple tools that make decisions smarter.</p>
-        <div class="cta">
-          <a class="btn primary" href="#projects">View Projects</a>
-        </div>
       </section>
 
       <!-- ABOUT -->
       <section id="about">
         <h2>About</h2>
-        <p>I’m an Economics major with a Data Science minor at Drexel University, focused on practical machine learning and analytics. I enjoy turning raw data into clear insights and building lightweight tools that help teams move faster. Outside of class, I enjoy soccer and exploring how AI can improve daily life.</p>
+        <p>I’m an Economics major with a Data Science minor at Drexel University, focused on practical machine learning and analytics. I enjoy turning raw data into clear insights and building lightweight tools that help teams move faster. Right now, I’m strengthening my portfolio with hands-on projects in Python and visualization while preparing for my next co-op.</p>
       </section>
 
       <!-- EDUCATION -->
@@ -130,9 +117,9 @@
             <strong>Drexel University — LeBow College of Business, Pennoni Honors College</strong>
             <div class="meta">B.S. in Economics · Minor: Data Science · Sept 2025 – Dec 2027 · Philadelphia, PA</div>
             <ul class="list">
-              <li>Honors: Pennoni Honors College</li>
+              <li>Honors: Member, Pennoni Honors College</li>
               <li>Organizations: Drexel Economics Society, Drexel AI</li>
-              <li>Key coursework: Programming I & II, Data Science, Database Systems, Business Statistics, Calculus I–III, Human-Centered Design, Micro/Macroeconomics</li>
+              <li>Key coursework: Programming I & II, Intro to Data Science, Database Systems, Business Statistics I, Calculus I–III, Human-Centered Design, Micro/Macroeconomics</li>
             </ul>
           </div>
           <div class="card">
@@ -150,17 +137,19 @@
             <strong>M&N Home Care Services LLC</strong>
             <div class="meta">Intake & Enrollment Specialist · Oct 2024 – May 2025 · New York, NY</div>
             <ul class="list">
-              <li>Created and maintained client data & enrollment reports using Excel and Python.</li>
-              <li>Coordinated nurse appointments and streamlined multi-plan enrollment workflows.</li>
-              <li>Analyzed operational data to improve client retention and efficiency.</li>
+              <li>Created and maintained prospect data & enrollment lists using Excel and Python; generated reports for senior management.</li>
+              <li>Coordinated nurse appointments and streamlined client enrollment processes.</li>
+              <li>Analyzed trends to identify growth opportunities and improve client retention.</li>
+              <li>Delivered monthly performance dashboards for strategic planning.</li>
             </ul>
           </div>
           <div class="card">
             <strong>University of Idaho — Athletics</strong>
-            <div class="meta">Videographer · Sept 2022 – Dec 2022 · Moscow, ID</div>
+            <div class="meta">Videographer (Women’s Basketball & Soccer) · Sept 2022 – Dec 2022 · Moscow, ID</div>
             <ul class="list">
-              <li>Enhanced live broadcasting for women’s basketball and soccer events.</li>
-              <li>Collaborated with 50+ technical staff to optimize streaming workflows.</li>
+              <li>Managed video production and streaming for athletics events.</li>
+              <li>Collaborated with 50+ production staff for event coordination.</li>
+              <li>Supported coaches with analysis footage and highlight editing.</li>
             </ul>
           </div>
         </div>
@@ -173,17 +162,24 @@
           <div class="card">
             <strong>U.S. Inflation Trend Analyzer</strong>
             <div class="meta">Python · Tableau</div>
-            <p>Interactive Tableau dashboard analyzing 14 years of U.S. CPI data. Cleaned and processed with Python (Pandas) to generate KPIs and visual insights.</p>
-          </div>
-          <div class="card">
-            <strong>Expense Tracker</strong>
-            <div class="meta">Python · SQLite · Matplotlib</div>
-            <p>Desktop-based tracker for daily expenses with category filtering and spending visualization.</p>
+            <p>Interactive Tableau dashboard analyzing 14 years of U.S. CPI data to identify inflation trends. Data cleaned and processed in Python (Pandas) to produce KPIs and visual insights.</p>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Data Cleaning</span>
+            </div>
           </div>
           <div class="card">
             <strong>KitchenAlchemy (In Progress)</strong>
             <div class="meta">HTML · CSS · GitLab</div>
-            <p>Collaborating in a 4-member team to build a recipe recommendation website that reduces food waste and promotes diverse, affordable cooking. Contributing to interface design, usability testing, and front-end development.</p>
+            <p>Team-based recipe recommendation website focused on reducing food waste and exploring diverse global recipes. Contributing to planning, interface layout, and usability testing.</p>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">Usability Testing</span>
+              <span class="chip">GitLab</span>
+            </div>
           </div>
         </div>
       </section>
@@ -192,25 +188,9 @@
       <section id="skills">
         <h2>Skills</h2>
         <div class="card">
-          <div class="chips">
-            <span class="chip">Python</span>
-            <span class="chip">R</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Java</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Pandas</span>
-            <span class="chip">NumPy</span>
-            <span class="chip">Matplotlib</span>
-            <span class="chip">Tableau</span>
-            <span class="chip">Power BI</span>
-            <span class="chip">Excel</span>
-            <span class="chip">AWS</span>
-            <span class="chip">Azure</span>
-            <span class="chip">Git</span>
-            <span class="chip">GitHub</span>
-          </div>
+          <p><strong>Programming Languages:</strong> Python, R, SQL, Java</p>
+          <p><strong>Data Tools:</strong> Pandas, NumPy, Matplotlib, Tableau, Power BI, Excel</p>
+          <p><strong>Cloud:</strong> AWS, Azure</p>
         </div>
       </section>
 
@@ -220,8 +200,8 @@
         <div class="card">
           <p><strong>Email:</strong> <a href="mailto:ml3862@drexel.edu">ml3862@drexel.edu</a></p>
           <p><strong>Phone:</strong> <a href="tel:+12089977541">(208) 997-7541</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/madhav-lamichhane-33304b264" target="_blank">linkedin.com/in/madhav-lamichhane-33304b264</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/Mlamichhane1" target="_blank">github.com/Mlamichhane1</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/madhav-lamichhane-33304b264" target="_blank" rel="noopener">linkedin.com/in/madhav-lamichhane-33304b264</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/Mlamichhane1" target="_blank" rel="noopener">github.com/Mlamichhane1</a></p>
         </div>
         <div class="footer">© <span id="year"></span> Madhav Lamichhane. Built for GitHub Pages.</div>
       </section>
@@ -243,7 +223,7 @@
           link.classList.add('active');
         }
       });
-    }, { rootMargin: "-40% 0px -55% 0px" });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
     sections.forEach(s => observer.observe(s));
   </script>
 </body>
