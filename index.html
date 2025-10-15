@@ -34,14 +34,22 @@
     .layout{display:grid; grid-template-columns:280px 1fr; min-height:100vh}
     .sidebar{
       position:sticky; top:0; height:100vh; border-right:1px solid var(--border);
-      padding:28px 22px; background:#fcfdff;
+      padding:28px 22px; background:#fcfdff; text-align:center;
+    }
+    .profile-photo{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      object-fit:cover;
+      box-shadow:var(--shadow);
+      margin-bottom:14px;
     }
     .brand{font-weight:700; font-size:1.1rem;}
     .tagline{color:var(--muted); margin-top:4px; font-size:.95rem}
-    .nav{margin-top:22px}
+    .nav{margin-top:22px; text-align:left;}
     .nav a{display:block; padding:10px 12px; border-radius:10px; color:var(--muted); font-weight:500}
     .nav a:hover,.nav a.active{background:var(--chip); color:var(--text)}
-    .links{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+    .links{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
     .links a{padding:8px 12px; background:var(--chip); border:1px solid var(--border); border-radius:999px; font-size:.9rem}
 
     .content{padding:40px 8vw 80px}
@@ -79,6 +87,7 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
+      <img src="Madhav_Lamichhane.jpg" alt="Madhav Lamichhane" class="profile-photo" />
       <div class="brand">Madhav Lamichhane</div>
       <div class="tagline">Economics & Data Science @ Drexel</div>
       <nav class="nav">
@@ -110,7 +119,7 @@
       <!-- ABOUT -->
       <section id="about">
         <h2>About</h2>
-        <p>I’m an Economics major with a Data Science minor at Drexel University, focused on practical machine learning and analytics. I enjoy turning raw data into clear insights and building lightweight tools that help teams move faster. Right now, I’m strengthening my portfolio with hands-on projects in Python and visualization while preparing for my next co-op.</p>
+        <p>I’m an Economics major with a Data Science minor at Drexel University, focused on practical machine learning and analytics. I enjoy turning raw data into clear insights and building lightweight tools that help teams move faster. Outside of class, I enjoy soccer and exploring how AI can improve daily life.</p>
       </section>
 
       <!-- EDUCATION -->
